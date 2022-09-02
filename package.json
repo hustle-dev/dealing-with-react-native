@@ -1,0 +1,16 @@
+{
+  "name": "dealing-with-react-native",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hustle-dev/dealing-with-react-native.git",
+  "author": "hustle-dev <dlwoabsdk@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "cz-conventional-changelog": "3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

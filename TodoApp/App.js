@@ -1,12 +1,13 @@
 import React from 'react';
 import {SafeAreaView, View, Text, StyleSheet} from 'react-native';
+import DateHead from './components/DateHead';
 
 function App() {
+  const today = new Date();
+
   return (
     <SafeAreaView>
-      <View>
-        <Text>TodoApp</Text>
-      </View>
+      <DateHead date={today} />
     </SafeAreaView>
   );
 }

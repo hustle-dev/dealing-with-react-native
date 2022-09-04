@@ -1,11 +1,22 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import FloatingWriteButton from '../components/FloatingWriteButton';
+import LogContext from '../contexts/LogContext';
+import FeedList from './FeedList';
 
 function FeedScreen() {
+  const {logs} = useContext(LogContext);
+  const [hidden, setHidden] = useState(false);
+  const onScrolledToBottom = isBottom => {
+    if (hidden !== isBottom) {
+      setHidden(isBottom);
+    }
+  };
+
   return (
     <View style={styles.block}>
-      <FloatingWriteButton />
+      <FeedList logs={logs} onScrolledToBottom={onScrolledToBottom} />
+      <FloatingWriteButton hidden={hidden} />
     </View>
   );
 }

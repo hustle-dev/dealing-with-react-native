@@ -10,6 +10,12 @@
 arch x86_64 pod install
 ```
 
+## git commitizen: making repo commitizen friendly
+
+```
+commitizen init cz-conventional-changelog --yarn --dev --exact
+```
+
 ## 참고자료
 
 - [길벗출판사 GitHub](https://github.com/gilbutITbook/080236)

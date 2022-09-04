@@ -1,9 +1,9 @@
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import React from 'react';
 import {Button, Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
 function HomeScreen({navigation}) {
   return (
@@ -44,47 +44,51 @@ function MainScreen() {
     <Tab.Navigator
       initialRouteName="Home"
       tabBarOptions={{
-        activeTintColor: '#fb8c00',
-        showLabel: false,
+        showIcon: true,
       }}>
       <Tab.Screen
         name="Home"
         component={HomeScreen}
         options={{
-          title: '홈',
-          tabBarIcon: ({color, size}) => (
-            <Icon name="home" color={color} size={size} />
-          ),
+          tabBarLabel: '홈',
+          tabBarIcon: ({color}) => <Icon name="home" color={color} size={24} />,
+          tabBarColor: 'black',
+          tabBarBadge: 'new',
         }}
       />
       <Tab.Screen
         name="Search"
         component={SearchScreen}
         options={{
-          title: '검색',
-          tabBarIcon: ({color, size}) => (
-            <Icon name="search" color={color} size={size} />
+          tabBarLabel: '검색',
+          tabBarIcon: ({color}) => (
+            <Icon name="search" color={color} size={24} />
           ),
+          tabBarColor: 'gray',
         }}
       />
       <Tab.Screen
         name="Notification"
         component={NotificationScreen}
         options={{
-          title: '알림',
-          tabBarIcon: ({color, size}) => (
-            <Icon name="notification" color={color} size={size} />
+          tabBarLabel: '알림',
+          tabBarIcon: ({color}) => (
+            <Icon name="notification" color={color} size={24} />
           ),
+          tabBarColor: 'green',
+          tabBarBadge: 30,
         }}
       />
       <Tab.Screen
         name="Message"
         component={MessageScreen}
         options={{
-          title: '메시지',
-          tabBarIcon: ({color, size}) => (
-            <Icon name="message" color={color} size={size} />
+          tabBarLabel: '메시지',
+          tabBarIcon: ({color}) => (
+            <Icon name="message" color={color} size={24} />
           ),
+          tabBarColor: 'blue',
+          tabBarBadge: true,
         }}
       />
     </Tab.Navigator>

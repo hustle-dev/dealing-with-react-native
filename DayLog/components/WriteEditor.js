@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import {StyleSheet, TextInput, View} from 'react-native';
 
 function WriteEditor({title, body, onChangeTitle, onChangeBody}) {
+  console.log(body);
   const bodyRef = useRef();
 
   return (

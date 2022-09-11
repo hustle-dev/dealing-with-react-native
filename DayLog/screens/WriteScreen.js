@@ -14,7 +14,7 @@ import LogContext from '../contexts/LogContext';
 function WriteScreen({route}) {
   const log = route.params?.log;
   const [title, setTitle] = useState(log?.title ?? '');
-  const [body, setBody] = useState(log?.title ?? '');
+  const [body, setBody] = useState(log?.body ?? '');
   const navigation = useNavigation();
   const [date, setDate] = useState(log ? new Date(log.date) : new Date());
 

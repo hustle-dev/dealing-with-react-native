@@ -14,6 +14,7 @@ import CustomButton from '../components/CustomButton';
 import SignButtons from '../components/SignButtons';
 import SignForm from '../components/SignForm';
 import {signIn, signUp} from '../lib/auth';
+import {getUser} from '../lib/users';
 
 function SignInScreen({navigation, route}) {
   const {isSignUp} = route.params ?? {};
@@ -42,7 +43,12 @@ function SignInScreen({navigation, route}) {
     setLoading(true);
     try {
       const {user} = isSignUp ? await signUp(info) : await signIn(info);
-      console.log(user);
+      const profile = await getUser(user.uid);
+      if (!profile) {
+        navigation.navigate('Welcome', {uid: user.uid});
+      } else {
+        //
+      }
     } catch (e) {
       const messages = {
         'auth/email-already-in-use': '이미 가입된 이메일입니다.',

@@ -1,10 +1,13 @@
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {Text} from 'react-native';
-import Counter from './Couter';
-import Profile from './Profile';
+import RootStack from './screens/RootStack';
 
 function App() {
-  return <Counter />;
+  return (
+    <NavigationContainer>
+      <RootStack />
+    </NavigationContainer>
+  );
 }
 
 export default App;

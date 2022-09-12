@@ -13,6 +13,7 @@ import BorderedInput from '../components/BorderedInput';
 import CustomButton from '../components/CustomButton';
 import SignButtons from '../components/SignButtons';
 import SignForm from '../components/SignForm';
+import {useUserContext} from '../contexts/UserContext';
 import {signIn, signUp} from '../lib/auth';
 import {getUser} from '../lib/users';
 
@@ -25,6 +26,7 @@ function SignInScreen({navigation, route}) {
   });
 
   const [loading, setLoading] = useState();
+  const {setUser} = useUserContext();
 
   const createChangeTextHandler = name => value => {
     setForm({...form, [name]: value});
@@ -47,7 +49,7 @@ function SignInScreen({navigation, route}) {
       if (!profile) {
         navigation.navigate('Welcome', {uid: user.uid});
       } else {
-        //
+        setUser(profile);
       }
     } catch (e) {
       const messages = {

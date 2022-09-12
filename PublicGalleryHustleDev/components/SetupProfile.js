@@ -1,6 +1,7 @@
 import {useNavigation, useRoute} from '@react-navigation/native';
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
+import {useUserContext} from '../contexts/UserContext';
 import {signOut} from '../lib/auth';
 import {createUser} from '../lib/users';
 import BorderedInput from './BorderedInput';
@@ -9,16 +10,19 @@ import CustomButton from './CustomButton';
 function SetupProfile() {
   const [displayName, setDisplayName] = useState('');
   const navigation = useNavigation();
+  const {setUser} = useUserContext();
 
   const {params} = useRoute();
   const {uid} = params || {};
 
   const onSubmit = () => {
-    createUser({
+    const user = createUser({
       id: uid,
       displayName,
       photoURL: null,
     });
+    createUser(user);
+    setUser(user);
   };
   const onCancel = () => {
     signOut();

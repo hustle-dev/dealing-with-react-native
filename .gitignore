@@ -375,4 +375,6 @@ google-services.json
 # Ignore code-workspaces
 *.code-workspace
 
+*GoogleService-Info.plist
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,node,reactnative

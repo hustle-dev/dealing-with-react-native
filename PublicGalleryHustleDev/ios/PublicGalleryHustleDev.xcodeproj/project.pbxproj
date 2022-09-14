@@ -14,7 +14,7 @@
 		1A66833CB5CBB3A9F0A91A61 /* Pods_PublicGalleryHustleDev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7ACA2694C9C4015095EB0B /* Pods_PublicGalleryHustleDev.framework */; };
 		7360EA4EF365C63E15F8F830 /* Pods_PublicGalleryHustleDev_PublicGalleryHustleDevTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E240AE8EFC7383929D2108B1 /* Pods_PublicGalleryHustleDev_PublicGalleryHustleDevTests.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		CEDF268628CF9DA1005F30BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEDF268528CF9DA1005F30BE /* GoogleService-Info.plist */; };
+		CEF9F71D28D167B30019C1BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEF9F71C28D167B30019C1BB /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,7 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PublicGalleryHustleDev/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-PublicGalleryHustleDev-PublicGalleryHustleDevTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PublicGalleryHustleDev-PublicGalleryHustleDevTests.release.xcconfig"; path = "Target Support Files/Pods-PublicGalleryHustleDev-PublicGalleryHustleDevTests/Pods-PublicGalleryHustleDev-PublicGalleryHustleDevTests.release.xcconfig"; sourceTree = "<group>"; };
 		AA7ACA2694C9C4015095EB0B /* Pods_PublicGalleryHustleDev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PublicGalleryHustleDev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEDF268528CF9DA1005F30BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEF9F71C28D167B30019C1BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E240AE8EFC7383929D2108B1 /* Pods_PublicGalleryHustleDev_PublicGalleryHustleDevTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PublicGalleryHustleDev_PublicGalleryHustleDevTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -118,7 +118,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				CEDF268528CF9DA1005F30BE /* GoogleService-Info.plist */,
+				CEF9F71C28D167B30019C1BB /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* PublicGalleryHustleDev */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* PublicGalleryHustleDevTests */,
@@ -245,8 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				CEF9F71D28D167B30019C1BB /* GoogleService-Info.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				CEDF268628CF9DA1005F30BE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
